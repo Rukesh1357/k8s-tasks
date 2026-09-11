@@ -23,8 +23,17 @@ spec:
           envFrom:
             - configMapRef:
                 name: cm-os
-          envFrom:
-            - secretRef:
-                name: os-secret
+          env:
+            - name: DB_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  name: os-secret
+                  key: DB_USERNAME
+
+            - name: DB_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: os-secret
+                  key: DB_PASSWORD
 
 
