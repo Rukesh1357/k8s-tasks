@@ -8,3 +8,5 @@ data:
   APP_ENV: dev
   LOG_Level: INFO
   PAYMENT_URL: http://payment-service
+  DB_HOST: mysql-service
+  DB_PORT: 3306
